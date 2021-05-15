@@ -1,0 +1,63 @@
+h1 {
+    color: #444;
+    margin: 20px 0;
+    text-align: center;
+}
+
+h2 {
+    color: #444;
+    border-radius: 4px;
+    font-size: 24px;
+    margin: 10px 0;
+    padding: 8px 0;
+    text-align: center;
+}
+
+code {
+    color: #fff;
+}
+
+.btn {
+    border: none;
+}
+
+.cheatsheet .prefix {
+    margin-right: 20px;
+}
+
+.cheatsheet .cmd {
+    border-radius: 4px;
+    font-size: 22px;
+    margin: 0 0 5px;
+    padding: 5px 10px;
+}
+
+.cheatsheet .cmd .fa-dollar {
+    font-size: .875em;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.cheatsheet p {
+    color: #666;
+    font-size: 16px;
+    margin: 5px 0 25px 0;
+}
+
+.cheatsheet .shortcut {
+    font-size: 22px;
+}
+
+.cheatsheet .shortcut kbd {
+    box-shadow: 2px 2px 2px #aaa;
+    padding: 3px 10px;
+}
+
+.love {
+    color: red;
+}
+
+footer {
+    margin-bottom: 20px;
+    text-align: center;
+}

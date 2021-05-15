@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Latest shortcuts, quick reference for screen terminal multiplexer which runs on Linux, OS X, OpenBSD, FreeBSD, NetBSD, etc...">
+    <meta name="keywords" content="screen,terminal multiplexer,cheatsheet,screen command,screen config,screen examples,screen linux,screen ubuntu">
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="styles/tooltip.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+
+    <title>Screen Cheat Sheet &amp; Quick Reference</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js" integrity="sha512-sIqUEnRn31BgngPmHt2JenzleDDsXwYO+iyvQ46Mw6RL+udAUZj2n/u/PGY80NxRxynO7R9xIGx5LEzw4INWJQ==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- Fixed navbar -->
+<header class="py-3 mb-4 border-bottom bg-light">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <a href="" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+        <span class="fs-4"><i class="fa fa-terminal" aria-hidden="true"></i> Screen Cheat Sheet</span>
+      </a>
+    </div>
+</header>
+
+<div class="container">
+    <script src="js/javascript.js"></script>
+    <div class="row">
+        <h1>Screen Cheat Sheet &amp; Quick Reference</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="bg-info">Sessions</h2>
+        </div>
+    </div>
+    <div class="row cheatsheet">
+        <div class="col-md-6">
+            <div class="cmd bg-dark bg-dark">
+                <i class="fa fa-dollar btn-dark"></i>
+                <code>screen</code>
+                <button class="btn btn-dark float-end" data-clipboard-snippet><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </div>
+            <p>Start a new session</p>
+
+            <div class="cmd bg-dark">
+                <i class="fa fa-dollar btn-dark"></i>
+                <code>screen -S mysession</code>
+                <button class="btn btn-dark float-end" data-clipboard-snippet><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </div>
+            <p>Start a new session with the name <i>mysession</i></p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>:sessionname newname</kbd></div>
+            <p>Rename session to newname</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>d</kbd></div>
+            <p>Detach from session</p>
+
+        </div>
+        <div class="col-md-6">
+            <div class="cmd bg-dark">
+                <i class="fa fa-dollar btn-dark"></i>
+                <code>screen -d name</code>
+                <button class="btn btn-dark float-end" data-clipboard-snippet><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </div>
+            <p>Detach a running session</p>
+
+            <div class="cmd bg-dark">
+                <i class="fa fa-dollar btn-dark"></i>
+                <code>screen -r mysession</code>
+                <button class="btn btn-dark float-end" data-clipboard-snippet><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </div>
+            <p>Attach to a session with the name <i>mysession</i></p>
+
+            <div class="cmd bg-dark">
+                <i class="fa fa-dollar btn-dark"></i>
+                <code>screen -ls</code>
+                <button class="btn btn-dark float-end" data-clipboard-snippet><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </div>
+            <p>List running sessions / screens</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="bg-info">Windows</h2>
+        </div>
+    </div>
+    <div class="row cheatsheet">
+        <div class="col-md-6">
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>c</kbd></div>
+            <p>Create window, run console</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>A</kbd></div>
+            <p>Rename current window</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>k</kbd>&nbsp;&nbsp;&nbsp;or<br><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>:remove</kbd></div>
+            <p>Close current window</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>\</kbd></div>
+            <p>Close all windows</p>
+        </div>
+        <div class="col-md-6">
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span></div>
+            <p>Last-visited active window</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>p</kbd></div>
+            <p>Previous window</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>n</kbd></div>
+            <p>Next window</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>0</kbd> ...<kbd>9</kbd></div>
+            <p>Select window by number</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="bg-info">Split Screen</h2>
+        </div>
+    </div>
+    <div class="row cheatsheet">
+        <div class="col-md-6">
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>S</kbd>&nbsp;&nbsp;&nbsp;or<br><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>:split</kbd></div>
+            <p>Split display horizontally</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>|</kbd>&nbsp;&nbsp;&nbsp;or<br><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>:split -v</kbd></div>
+            <p>Split display vertically</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>tab</kbd></div>
+            <p>Jump to next display region</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>:"</kbd></div>
+            <p>Navigate between screen</p>
+        </div>
+
+        <div class="col-md-6">
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>X</kbd></div>
+            <p>Remove current region</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>Q</kbd></div>
+            <p>Remove all regions but the current one</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>:layout save default</kbd></div>
+            <p>Save splitting position</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="bg-info">Misc</h2>
+        </div>
+    </div>
+    <div class="row cheatsheet">
+        <div class="col-md-6">
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>[</kbd></div>
+            <p>Enter copy mode</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>]</kbd></div>
+            <p>Paste</p>
+
+            <div class="cmd bg-dark">
+                <i class="fa fa-dollar btn-dark"></i>
+                <code>vi ~/.screenrc</code>
+                <button class="btn btn-dark float-end" data-clipboard-snippet><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </div>
+            <p>Edit configuration file</p>
+        </div>
+        <div class="col-md-6">
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>:</kbd></div>
+            <p>Enter screen command</p>
+
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <span class="prefix"><kbd>Ctrl</kbd> + <kbd>l</kbd> </span></div>
+            <p>Redraw window</p>
+        </div>
+        <div class="col-md-12">
+            <div class="cmd bg-dark">
+                <code># Use bash<br>
+                    shell /bin/bash<br>
+                    <br>
+                    autodetach on<br>
+                    <br>
+                    # No annoying startup message<br>
+                    startup_message off<br>
+                    <br>
+                    # Display the status line at the bottom<br>
+                    hardstatus on<br>
+                    hardstatus alwayslastline<br>
+                    hardstatus string "%{.kW}%-w%{.bW}%t [%n]%{-}%+w %=%{..G} %H %{..Y} %Y/%m/%d %c"<br>
+                    <br>
+                    # Setup screens<br>
+                    chdir /home/pi/ # All screens start in ~/Sites folder<br>
+                    screen -t 'server' 0 bash # Make first screen for running server<br>
+                    screen -t 'specs' 1 bash # Make screen for running tests<br>
+                    screen -t 'workspace' 2 bash # Make screen for general work i.e. running git commands</code>
+                <button class="btn btn-dark float-end" data-clipboard-snippet><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </div>
+            <p>Config sample for ~/.screenrc</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="bg-info">Help</h2>
+        </div>
+    </div>
+    <div class="row cheatsheet">
+        <div class="col-md-6">
+            <div class="cmd bg-dark">
+                <i class="fa fa-dollar btn-dark"></i>
+                <code>screen --help</code>
+                <button class="btn btn-dark float-end" data-clipboard-snippet><i class="fa fa-clipboard" aria-hidden="true"></i></button>
+            </div>
+            <p>Show help</p>
+        </div>
+        <div class="col-md-6">
+            <div class="shortcut"><span class="prefix"><kbd>Ctrl</kbd> + <kbd>a</kbd> </span> <kbd>?</kbd></div>
+            <p>Show shortcuts</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>Made with <span class="love">❤</span>&nbsp;&nbsp;by <a href="https://github.com/mehdichaouch/screen-cheat-sheet">Mehdi Chaouch</a></p>
+</footer>
+
+</body>
+</html>
+
